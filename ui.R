@@ -11,23 +11,23 @@ library(shiny)
 
 # Define UI for application that draws a histogram
 shinyUI(fluidPage(
-  
-  # Application title
-  titlePanel("Old Faithful Geyser Data"),
-  
-  # Sidebar with a slider input for number of bins 
-  sidebarLayout(
-    sidebarPanel(
-       sliderInput("bins",
-                   "Number of bins:",
-                   min = 1,
-                   max = 50,
-                   value = 30)
-    ),
-    
-    # Show a plot of the generated distribution
-    mainPanel(
-       plotOutput("distPlot")
-    )
-  )
+        
+        # Application title
+        titlePanel("AAPL chart"),
+        
+        # Sidebar with a slider input for number of months 
+        sidebarLayout(
+                sidebarPanel(
+                        sliderInput("bins",
+                                    "Select the time line for chart data for AAPL",
+                                    min = 1,
+                                    max = 12,
+                                    value = 3)
+                ),
+                
+                # Show a plot of the generated graph
+                mainPanel(
+                        plotOutput("distPlot")
+                )
+        )
 ))
